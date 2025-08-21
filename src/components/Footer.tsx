@@ -169,7 +169,7 @@ const Footer = () => {
 
             {/* Social Media Links */}
             <div>
-              <h5 className="text-sm font-semibold text-white mb-4">
+              <h5 className="text-sm font-bold text-gray-800 mb-4">
                 Follow Our Impact
               </h5>
               <div className="flex space-x-3">
