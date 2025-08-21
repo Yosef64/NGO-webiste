@@ -7,6 +7,7 @@ import {
   ArrowRight,
   Award,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SchoolConstruction = () => {
   const programs = [
@@ -113,80 +114,13 @@ const SchoolConstruction = () => {
   ];
 
   const gallery = [
-    "https://images.pexels.com/photos/8613310/pexels-photo-8613310.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/8923981/pexels-photo-8923981.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/8613200/pexels-photo-8613200.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/8613174/pexels-photo-8613174.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/8923992/pexels-photo-8923992.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://res.cloudinary.com/dyumbngrf/image/upload/v1755802516/photo_2025-08-16_13-52-31_mej48d.jpg",
+    "https://res.cloudinary.com/dyumbngrf/image/upload/v1755802514/photo_2025-08-16_18-34-26_d9dklq.jpg",
+    "https://res.cloudinary.com/dyumbngrf/image/upload/v1755802515/photo_2025-08-16_13-52-23_gloa7m.jpg",
   ];
 
   return (
     <div className="pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-900 to-green-700 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage:
-              "url(https://images.pexels.com/photos/8613310/pexels-photo-8613310.jpeg?auto=compress&cs=tinysrgb&w=1920)",
-          }}
-        ></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-                <Building className="h-5 w-5 text-green-300 mr-2" />
-                <span className="text-green-200 font-medium">
-                  Building Futures
-                </span>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                School Construction
-              </h1>
-              <p className="text-xl text-green-100 leading-relaxed mb-8">
-                Every child deserves access to quality education in a safe,
-                modern learning environment. Through our school construction
-                program, we're building sustainable educational infrastructure
-                that transforms communities and creates opportunities for
-                generations to come.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Fund a School
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-green-900 transition-all duration-300">
-                  View Construction Plans
-                </button>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-4xl font-bold mb-2">75+</div>
-                    <div className="text-green-200">Schools Built</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">25,000+</div>
-                    <div className="text-green-200">Students Served</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">100%</div>
-                    <div className="text-green-200">Solar Powered</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">15</div>
-                    <div className="text-green-200">Countries</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Construction Impact Stats */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,219 +172,33 @@ const SchoolConstruction = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {programs.map((program, index) => {
-              const Icon = program.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-lg transition-all group"
-                >
-                  <div className="flex items-start space-x-6">
-                    <div className="bg-green-100 p-4 rounded-xl group-hover:bg-green-200 transition-colors">
-                      <Icon className="h-8 w-8 text-green-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
-                        {program.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {program.description}
-                      </p>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-500">Beneficiaries:</span>
-                          <div className="font-semibold text-gray-900">
-                            {program.beneficiaries}
-                          </div>
-                        </div>
-                        <div>
-                          <span className="text-gray-500">Facilities:</span>
-                          <div className="font-semibold text-gray-900">
-                            {program.locations}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Featured Construction Projects
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Innovative school construction projects that are setting new
-              standards for sustainable educational infrastructure in
-              challenging environments.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 overflow-hidden group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {project.status}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="mb-4">
-                    <span className="text-sm text-gray-500">
-                      {project.location}
-                    </span>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-3 mb-4">
-                    <p className="text-sm font-medium text-green-800">
-                      {project.impact}
-                    </p>
-                  </div>
-                  <button className="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colors group">
-                    Learn More
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
+            <div className="relative">
+              <img
+                src="https://res.cloudinary.com/dyumbngrf/image/upload/v1755802515/photo_2025-08-16_18-34-20_jwtg6t.jpg"
+                alt="School Construction Programs"
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white text-blue-900 p-6 rounded-xl shadow-lg">
+                <p className="text-3xl font-bold">25+</p>
+                <p className="text-sm font-medium">Schools Built</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Construction Process */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Construction Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a comprehensive approach that ensures every school we
-              build meets the highest standards of quality, sustainability, and
-              community needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Community Assessment",
-                description: "Evaluate local needs, terrain, and resources",
-              },
-              {
-                step: "02",
-                title: "Sustainable Design",
-                description: "Create eco-friendly architectural plans",
-              },
-              {
-                step: "03",
-                title: "Local Partnership",
-                description: "Collaborate with community leaders and workers",
-              },
-              {
-                step: "04",
-                title: "Quality Construction",
-                description: "Build with durable, locally-sourced materials",
-              },
-              {
-                step: "05",
-                title: "Ongoing Support",
-                description: "Provide maintenance and educational resources",
-              },
-            ].map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-600 font-bold">{phase.step}</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {phase.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {phase.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Construction Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real stories from communities where our school construction
-              projects have transformed educational opportunities and community
-              life.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-green-50 rounded-2xl p-8">
-              <div className="flex items-start space-x-4 mb-6">
-                <img
-                  src="https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Student"
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Sarah's New School
-                  </h3>
-                  <p className="text-green-600">Student, Rural Kenya</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                "Our new school has solar panels, clean water, and proper
-                toilets! Before, we studied under a tree and had to walk 2 hours
-                to find water. Now I can focus on my studies and dream of
-                becoming an engineer. The computer lab is my favorite place -
-                I'm learning to code!"
-              </p>
             </div>
-            <div className="bg-blue-50 rounded-2xl p-8">
-              <div className="flex items-start space-x-4 mb-6">
-                <img
-                  src="https://images.pexels.com/photos/8923950/pexels-photo-8923950.jpeg?auto=compress&cs=tinysrgb&w=100"
-                  alt="Teacher"
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Teacher John's Experience
-                  </h3>
-                  <p className="text-blue-600">Principal, Nepal</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                "The earthquake-resistant design gives us peace of mind during
-                monsoon season. The solar power means we can hold evening
-                classes for adults, and the library has become the heart of our
-                community. Enrollment has tripled since the new school opened,
-                and our test scores have improved dramatically."
+            <div className="">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Shalom Integrated Community Development (SICD) focuses on
+                education projects for conflict-affected IDPs and host
+                communities in Ethiopia's several regions. Their education
+                efforts seek to provide these communities with high-quality
+                educational opportunities, including access to learning tools
+                and a supportive environment for intellectual growth.
+              </p>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                SICD collaborates with several donors for these
+                education-related activities, including OCHA-EHF, HAI, IOM/RRF,
+                Japan Embassy and BHA. These partnerships enable AEID to
+                implement effective education programs, reaching more
+                beneficiaries and significantly contributing to the intellectual
+                empowerment of those affected by conflict in Ethiopia
               </p>
             </div>
           </div>
@@ -486,29 +234,14 @@ const SchoolConstruction = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Get Involved */}
-      <section className="py-20 bg-green-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-8">
-              Build a School, Build a Future
-            </h2>
-            <p className="text-xl text-green-100 max-w-4xl mx-auto leading-relaxed mb-12">
-              Your support can help us build more schools and create educational
-              opportunities for thousands of children. Join us in constructing
-              the foundations of better futures.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-2xl text-lg font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Fund a School Construction
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-white hover:text-green-900 transition-all duration-300">
-                Volunteer in Construction
-              </button>
-            </div>
-          </div>
+        <div className="text-center mt-12">
+          <Link
+            to="/media"
+            className="inline-flex group items-center border-2 border-blue-600 text-blue-600 px-8 py-4 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 transform shadow-lg hover:shadow-xl"
+          >
+            View All Images
+            <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+          </Link>
         </div>
       </section>
     </div>

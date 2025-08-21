@@ -53,7 +53,7 @@ const Home = () => {
       description:
         "Building modern, sustainable schools with solar power and clean water access in remote communities.",
       image:
-        "https://images.pexels.com/photos/8613310/pexels-photo-8613310.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://res.cloudinary.com/dyumbngrf/image/upload/v1755779714/photo_2025-08-16_13-52-02_leo12k.jpg",
       link: "/what-we-do/school-construction",
       sector: "Education",
       icon: GraduationCap,
@@ -64,7 +64,7 @@ const Home = () => {
       description:
         "Installing wells, water purification systems, and sanitation facilities for healthy communities.",
       image:
-        "https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://res.cloudinary.com/dyumbngrf/image/upload/v1755780925/photo_2025-08-16_13-52-10_x6m0sz.jpg",
       link: "/what-we-do/water-sanitation",
       sector: "Water & Sanitation",
       icon: Droplets,
@@ -75,7 +75,7 @@ const Home = () => {
       description:
         "Supporting women and girls through education, skills training, and economic opportunities.",
       image:
-        "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://res.cloudinary.com/dyumbngrf/image/upload/v1755781480/photo_2025-08-16_13-58-49_zx5bsx.jpg",
       link: "/what-we-do/women-empowerment",
       sector: "Women Empowerment",
       icon: Heart,
@@ -106,29 +106,23 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div className="">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
+          className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105 bg-opacity-25"
           style={{
             backgroundImage:
-              "url(https://images.pexels.com/photos/6994928/pexels-photo-6994928.jpeg?auto=compress&cs=tinysrgb&w=1920)",
+              "url(https://res.cloudinary.com/dyumbngrf/image/upload/v1755776793/background2_d15zud.png)",
           }}
         ></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
-          <div className="mb-6">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-              <Heart className="h-5 w-5 text-orange-400 mr-2" />
-              <span className="text-orange-100 font-medium">
-                Transforming Lives Since 2010
-              </span>
-            </div>
-          </div>
           <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight">
             Transforming Lives,
-            <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">
               {" "}
               Building Hope
             </span>
@@ -141,7 +135,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/donate"
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-2xl text-lg font-bold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center justify-center space-x-3"
+              className="bg-gradient-to-br gap-2 from-blue-900 to-blue-500 text-white px-10 py-5 rounded-2xl text-lg font-bold hover:from-blue-600 hover:to-blue-700 transition-all transform shadow-2xl hover:shadow-3xl flex items-center justify-center space-x-3"
             >
               <Heart className="h-5 w-5" />
               <span>Make a Donation</span>
@@ -161,7 +155,7 @@ const Home = () => {
       </section>
 
       {/* Impact by Numbers */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
+      {/* <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
@@ -203,20 +197,16 @@ const Home = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Us Snapshot */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center bg-orange-100 rounded-full px-6 py-2 mb-6">
-                <Heart className="h-5 w-5 text-orange-600 mr-2" />
-                <span className="text-orange-800 font-semibold">Our Story</span>
-              </div>
-              <h2 className="text-5xl font-bold text-gray-900 mb-8">
-                About HopeForward
-              </h2>
+              <h1 className="text-4xl font-extrabold text-gray-900 mb-8">
+                About Shalom
+              </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 For over a decade, HopeForward has been at the forefront of
                 sustainable development, working hand-in-hand with communities
@@ -233,7 +223,7 @@ const Home = () => {
               </p>
               <Link
                 to="/who-we-are/overview"
-                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
+                className="inline-flex group items-center border-2 border-blue-600 text-blue-600 px-8 py-3 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 transform shadow-lg hover:shadow-xl"
               >
                 Learn More About Us
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -242,7 +232,7 @@ const Home = () => {
             <div className="order-1 lg:order-2">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://res.cloudinary.com/dyumbngrf/image/upload/v1755778910/home_page_about_us_kfsu3a.jpg"
                   alt="About HopeForward"
                   className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
                 />
@@ -267,13 +257,7 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-green-100 rounded-full px-6 py-2 mb-6">
-              <Globe className="h-5 w-5 text-green-600 mr-2" />
-              <span className="text-green-800 font-semibold">
-                Global Impact
-              </span>
-            </div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="font-extrabold text-3xl lg:text-4xl xl:text-5xl mt-10 mb-6 text-center">
               Featured Projects
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -309,7 +293,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-8">
+                <div className="p-5">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {project.title}
                   </h3>
@@ -318,7 +302,7 @@ const Home = () => {
                   </p>
                   <Link
                     to={project.link}
-                    className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors group-hover:translate-x-2 transition-transform duration-300"
+                    className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800  group-hover:translate-x-2 transition-transform duration-300"
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -334,13 +318,13 @@ const Home = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-100 rounded-full px-6 py-2 mb-6">
-              <Target className="h-5 w-5 text-purple-600 mr-2" />
-              <span className="text-purple-800 font-semibold">
+            <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
+              <Target className="h-5 w-5 text-blue-600 mr-2" />
+              <span className="text-blue-800 font-semibold">
                 Our Focus Areas
               </span>
             </div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="font-extrabold text-3xl lg:text-4xl xl:text-5xl mb-6 text-center">
               What We Do
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -404,7 +388,7 @@ const Home = () => {
               <Link
                 key={index}
                 to={sector.path}
-                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover:border-gray-200"
+                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform  border border-gray-100 hover:border-gray-200"
               >
                 <div
                   className={`bg-gradient-to-r ${sector.color} rounded-xl p-4 w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
@@ -414,7 +398,7 @@ const Home = () => {
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {sector.name}
                 </h3>
-                <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center text-blue-600 font-medium transition-transform duration-300">
                   <span className="text-sm">Learn More</span>
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </div>
@@ -428,12 +412,6 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-indigo-100 rounded-full px-6 py-2 mb-6">
-              <Users className="h-5 w-5 text-indigo-600 mr-2" />
-              <span className="text-indigo-800 font-semibold">
-                Global Partnerships
-              </span>
-            </div>
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
               Our Trusted Partners
             </h2>
@@ -456,17 +434,17 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link
               to="/partnerships"
-              className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold hover:from-indigo-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-flex group items-center border-2 border-blue-600 text-blue-600 px-8 py-4 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 transform shadow-lg hover:shadow-xl"
             >
               View All Partnerships
-              <ArrowRight className="ml-3 h-5 w-5" />
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-yellow-100 rounded-full px-6 py-2 mb-6">
@@ -535,10 +513,10 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden">
+      <section className="py-24  text-black relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
@@ -547,56 +525,56 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-                <Phone className="h-5 w-5 text-orange-400 mr-2" />
-                <span className="text-orange-200 font-semibold">
+              <div className="inline-flex items-center bg-blue-100 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                <Phone className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-blue-600 font-semibold">
                   Get in Touch
                 </span>
               </div>
               <h2 className="text-5xl font-bold mb-8">
                 Ready to Make a Difference?
               </h2>
-              <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
                 Join thousands of supporters who are creating lasting change in
                 communities worldwide. Contact us to learn more about our work,
                 volunteer opportunities, or partnership possibilities.
               </p>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-2xl">
+                  <div className="bg-white text-blue-900 p-3 rounded-2xl">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
                     <div className="text-lg font-semibold">
                       +1 (555) 123-4567
                     </div>
-                    <div className="text-blue-200">
+                    <div className="text-gray-600">
                       Available 24/7 for emergencies
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-2xl">
+                  <div className="bg-white text-blue-900 p-3 rounded-2xl">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
                     <div className="text-lg font-semibold">
                       info@hopeforward.org
                     </div>
-                    <div className="text-blue-200">
+                    <div className="text-gray-600">
                       We respond within 24 hours
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-2xl">
+                  <div className="bg-white text-blue-900 p-3 rounded-2xl">
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
                     <div className="text-lg font-semibold">
                       123 Hope Street, Global City
                     </div>
-                    <div className="text-blue-200">Visit our headquarters</div>
+                    <div className="text-gray-600">Visit our headquarters</div>
                   </div>
                 </div>
               </div>
@@ -604,15 +582,9 @@ const Home = () => {
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/donate"
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
+                  className="inline-flex group items-center border-2 border-blue-600 text-blue-600 px-8 py-4 font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 transform shadow-lg hover:shadow-xl"
                 >
                   Start Supporting Today
-                </Link>
-                <Link
-                  to="/partnerships"
-                  className="border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-blue-900 transition-all duration-300 text-center"
-                >
-                  Partner With Us
                 </Link>
               </div>
             </div>
