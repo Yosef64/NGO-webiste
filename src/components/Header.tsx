@@ -56,9 +56,9 @@ const Header = () => {
       name: "Women & Girls Empowerment",
       path: "/what-we-do/women-empowerment",
     },
-    { name: "Health Sector", path: "/what-we-do/health" },
-    { name: "Nutrition Sector", path: "/what-we-do/nutrition" },
-    { name: "Climate Change", path: "/what-we-do/climate-change" },
+    // { name: "Health Sector", path: "/what-we-do/health" },
+    // { name: "Nutrition Sector", path: "/what-we-do/nutrition" },
+    // { name: "Climate Change", path: "/what-we-do/climate-change" },
   ];
 
   const handleDropdownOpen = (dropdown: string) => {
@@ -248,14 +248,70 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Placed outside the centered container for full width */}
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg">
           <div className="px-4 py-6 space-y-4">
-            <Link to="/" onClick={closeDropdownsAndMenu} className="block ...">
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-2 text-gray-700 hover:text-blue-700 font-medium"
+            >
               Home
             </Link>
-            {/* ... Mobile link sections for "Who We Are", "What We Do", etc. ... */}
+
+            <div>
+              <div className="font-semibold text-gray-900 mb-2">Who We Are</div>
+              <div className="pl-4 space-y-2">
+                {whoWeAreLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-1 text-gray-600 hover:text-blue-700"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="font-semibold text-gray-900 mb-2">What We Do</div>
+              <div className="pl-4 space-y-2">
+                {whatWeDoLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-1 text-gray-600 hover:text-blue-700"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              to="/where-we-work"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-2 text-gray-700 hover:text-blue-700 font-medium"
+            >
+              Where We Work
+            </Link>
+            <Link
+              to="/partnerships"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-2 text-gray-700 hover:text-blue-700 font-medium"
+            >
+              Partnerships
+            </Link>
+            <Link
+              to="/media"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-2 text-gray-700 hover:text-blue-700 font-medium"
+            >
+              Media
+            </Link>
           </div>
         </div>
       )}
