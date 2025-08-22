@@ -1,44 +1,7 @@
-import React from "react";
-import {
-  Droplets,
-  Shield,
-  Wrench,
-  Users,
-  ArrowRight,
-  Award,
-  Zap,
-  Heart,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WaterSanitation = () => {
-  const waterStats = [
-    {
-      icon: Droplets,
-      number: "250,000+",
-      label: "People Served",
-      description: "With access to clean water and sanitation",
-    },
-    {
-      icon: Shield,
-      number: "85%",
-      label: "Disease Reduction",
-      description: "In waterborne illness rates",
-    },
-    {
-      icon: Zap,
-      number: "180+",
-      label: "Solar Systems",
-      description: "Renewable energy water pumps installed",
-    },
-    {
-      icon: Award,
-      number: "20",
-      label: "Countries",
-      description: "Where we provide water solutions",
-    },
-  ];
-
   const gallery = [
     "https://res.cloudinary.com/dyumbngrf/image/upload/v1755780926/photo_2025-08-16_13-35-30_skqmng.jpg",
     "https://res.cloudinary.com/dyumbngrf/image/upload/v1755780923/photo_2025-08-16_13-37-28_poxbhq.jpg",
@@ -102,7 +65,7 @@ const WaterSanitation = () => {
               <img
                 src="https://res.cloudinary.com/dyumbngrf/image/upload/v1755780925/photo_2025-08-16_13-52-10_x6m0sz.jpg"
                 alt="Water & Sanitation Programs"
-                className="w-full h-96 object-cover rounded-2xl shadow-xl"
+                className="w-full h-full object-cover rounded-2xl shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-blue-900 p-6 rounded-xl shadow-lg">
                 <p className="text-3xl font-bold">30+</p>
@@ -111,9 +74,24 @@ const WaterSanitation = () => {
             </div>
             <div className="">
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our water and sanitation programs focus on improving access to
-                clean water, promoting hygiene practices, and ensuring
-                sustainable sanitation solutions for communities in need.
+                Shalom Integrated Community Development (SICD) is committed to
+                improving public health through our Water, Sanitation, and
+                Hygiene (WASH) program. We increase access to safe drinking
+                water by constructing and rehabilitating community wells and
+                water systems. This is paired with efforts to enhance sanitation
+                through the construction of latrines and the promotion of
+                critical hygiene practices, directly reducing waterborne
+                diseases and improving overall community well-being.
+              </p>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Our approach emphasizes community ownership and sustainable
+                solutions. SICD works in close partnership with local
+                communities, government health agencies, and international
+                partners to ensure infrastructure is properly managed and
+                hygiene education is integrated into daily life. By establishing
+                local water management committees and empowering residents with
+                knowledge, we help build a lasting foundation for a healthier
+                and more dignified future for all.
               </p>
             </div>
           </div>

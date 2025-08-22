@@ -166,7 +166,6 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-
             {/* Social Media Links */}
             <div>
               <h5 className="text-sm font-bold text-gray-800 mb-4">

@@ -1,6 +1,3 @@
-import React from "react";
-import { Calendar, Award, Globe, Users2 } from "lucide-react";
-
 const Background = () => {
   return (
     <div className="pt-20">

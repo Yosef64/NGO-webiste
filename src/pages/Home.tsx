@@ -16,37 +16,6 @@ import {
 } from "lucide-react";
 
 const Home = () => {
-  const stats = [
-    {
-      icon: Target,
-      label: "Projects Completed",
-      value: "250+",
-      color: "text-blue-600",
-      description: "Successful initiatives across all sectors",
-    },
-    {
-      icon: DollarSign,
-      label: "Budget Managed",
-      value: "$4.2M",
-      color: "text-green-600",
-      description: "Transparent financial stewardship",
-    },
-    {
-      icon: Users,
-      label: "Donors & Partners",
-      value: "850+",
-      color: "text-orange-600",
-      description: "Trusted supporters worldwide",
-    },
-    {
-      icon: Globe,
-      label: "Lives Transformed",
-      value: "25,000+",
-      color: "text-purple-600",
-      description: "Individuals directly impacted",
-    },
-  ];
-
   const projects = [
     {
       title: "School Construction Program",
@@ -135,14 +104,14 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/donate"
-              className="bg-gradient-to-br gap-2 from-blue-900 to-blue-500 text-white px-10 py-5 rounded-2xl text-lg font-bold hover:from-blue-600 hover:to-blue-700 transition-all transform shadow-2xl hover:shadow-3xl flex items-center justify-center space-x-3"
+              className="bg-gradient-to-br gap-2 from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl text-lg font-bold hover:from-blue-600 hover:to-blue-700 transition-all transform shadow-2xl hover:shadow-3xl flex items-center justify-center space-x-3"
             >
               <Heart className="h-5 w-5" />
               <span>Make a Donation</span>
             </Link>
             <Link
               to="/what-we-do/school-construction"
-              className="border-2 border-white text-white px-10 py-5 rounded-2xl text-lg font-bold hover:bg-white hover:text-blue-900 transition-all transform hover:scale-105 backdrop-blur-sm bg-white/10"
+              className="border-2 border-white text-white px-10 py-5 rounded-xl text-lg font-bold hover:bg-white hover:text-blue-900 transition-all transform hover:scale-105 backdrop-blur-sm bg-white/10"
             >
               Learn Our Impact
             </Link>

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Play, Image, Calendar, Eye } from "lucide-react";
+import { useState } from "react";
 
 const Media = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -369,62 +368,62 @@ const Media = () => {
     },
   ];
 
-  const videos = [
-    {
-      id: 1,
-      title: "Impact Story: Maria's Education Journey",
-      category: "education",
-      duration: "4:32",
-      views: "12.5K",
-      thumbnail:
-        "https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description:
-        "Follow Maria's inspiring journey from walking hours to school to becoming a teacher in her community.",
-    },
-    {
-      id: 2,
-      title: "Mobile Clinics: Bringing Healthcare Home",
-      category: "health",
-      duration: "6:15",
-      views: "8.2K",
-      thumbnail:
-        "https://images.pexels.com/photos/6627525/pexels-photo-6627525.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description:
-        "See how our mobile medical units are transforming healthcare access in remote communities.",
-    },
-    {
-      id: 3,
-      title: "Sustainable Farming Revolution",
-      category: "agriculture",
-      duration: "5:45",
-      views: "15.3K",
-      thumbnail:
-        "https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description:
-        "Discover how modern farming techniques are increasing yields and improving livelihoods.",
-    },
-    {
-      id: 4,
-      title: "HopeForward 2024 Annual Report",
-      category: "events",
-      duration: "8:20",
-      views: "25.1K",
-      thumbnail:
-        "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description:
-        "A comprehensive look at our achievements and impact throughout 2024.",
-    },
-  ];
+  // const videos = [
+  //   {
+  //     id: 1,
+  //     title: "Impact Story: Maria's Education Journey",
+  //     category: "education",
+  //     duration: "4:32",
+  //     views: "12.5K",
+  //     thumbnail:
+  //       "https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //     description:
+  //       "Follow Maria's inspiring journey from walking hours to school to becoming a teacher in her community.",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Mobile Clinics: Bringing Healthcare Home",
+  //     category: "health",
+  //     duration: "6:15",
+  //     views: "8.2K",
+  //     thumbnail:
+  //       "https://images.pexels.com/photos/6627525/pexels-photo-6627525.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //     description:
+  //       "See how our mobile medical units are transforming healthcare access in remote communities.",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Sustainable Farming Revolution",
+  //     category: "agriculture",
+  //     duration: "5:45",
+  //     views: "15.3K",
+  //     thumbnail:
+  //       "https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //     description:
+  //       "Discover how modern farming techniques are increasing yields and improving livelihoods.",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "HopeForward 2024 Annual Report",
+  //     category: "events",
+  //     duration: "8:20",
+  //     views: "25.1K",
+  //     thumbnail:
+  //       "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //     description:
+  //       "A comprehensive look at our achievements and impact throughout 2024.",
+  //   },
+  // ];
 
   const filteredPhotos =
     selectedCategory === "all"
       ? photos
       : photos.filter((photo) => photo.category === selectedCategory);
 
-  const filteredVideos =
-    selectedCategory === "all"
-      ? videos
-      : videos.filter((video) => video.category === selectedCategory);
+  // const filteredVideos =
+  //   selectedCategory === "all"
+  //     ? videos
+  //     : videos.filter((video) => video.category === selectedCategory);
 
   return (
     <div className="pt-20">

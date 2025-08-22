@@ -1,120 +1,7 @@
-import React from "react";
-import {
-  Heart,
-  Users,
-  GraduationCap,
-  Briefcase,
-  ArrowRight,
-  Award,
-  TrendingUp,
-  Shield,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WomenEmpowerment = () => {
-  const programs = [
-    {
-      title: "Girls Education Initiative",
-      description:
-        "Providing scholarships, school supplies, and safe transportation to ensure girls complete their education.",
-      icon: GraduationCap,
-      beneficiaries: "12,000 girls",
-      locations: "150 schools",
-      image:
-        "https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      title: "Women's Business Development",
-      description:
-        "Microfinance, business training, and market access support to help women start and grow their enterprises.",
-      icon: Briefcase,
-      beneficiaries: "8,500 women",
-      locations: "200 businesses started",
-      image:
-        "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      title: "Healthcare & Maternal Support",
-      description:
-        "Prenatal care, family planning services, and health education specifically designed for women and mothers.",
-      icon: Heart,
-      beneficiaries: "15,000 women",
-      locations: "80 health centers",
-      image:
-        "https://images.pexels.com/photos/6627511/pexels-photo-6627511.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      title: "Leadership & Rights Training",
-      description:
-        "Empowering women with leadership skills, legal rights education, and advocacy training.",
-      icon: Shield,
-      beneficiaries: "6,000 women",
-      locations: "120 training programs",
-      image:
-        "https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-  ];
-
-  const projects = [
-    {
-      title: "Rural Women Entrepreneurs - India",
-      description:
-        "Supporting women in rural India to start textile cooperatives and access national markets.",
-      image:
-        "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800",
-      status: "Active",
-      location: "Rural India",
-      impact: "2,500 women entrepreneurs, 150 cooperatives formed",
-    },
-    {
-      title: "Girls STEM Education - Kenya",
-      description:
-        "Encouraging girls to pursue science, technology, engineering, and mathematics through scholarships and mentorship.",
-      image:
-        "https://images.pexels.com/photos/8613078/pexels-photo-8613078.jpeg?auto=compress&cs=tinysrgb&w=800",
-      status: "Expanding",
-      location: "Nairobi & Rural Kenya",
-      impact: "1,800 girls in STEM programs, 85% graduation rate",
-    },
-    {
-      title: "Maternal Health Network - Afghanistan",
-      description:
-        "Training female community health workers to provide essential maternal and child health services.",
-      image:
-        "https://images.pexels.com/photos/6627511/pexels-photo-6627511.jpeg?auto=compress&cs=tinysrgb&w=800",
-      status: "Critical",
-      location: "Rural Afghanistan",
-      impact: "500 health workers trained, 8,000 mothers served",
-    },
-  ];
-
-  const empowermentStats = [
-    {
-      icon: Users,
-      number: "41,500+",
-      label: "Women Empowered",
-      description: "Through our comprehensive programs",
-    },
-    {
-      icon: Briefcase,
-      number: "3,200+",
-      label: "Businesses Started",
-      description: "Women-owned enterprises launched",
-    },
-    {
-      icon: GraduationCap,
-      number: "95%",
-      label: "School Completion",
-      description: "Rate for girls in our programs",
-    },
-    {
-      icon: TrendingUp,
-      number: "300%",
-      label: "Income Increase",
-      description: "Average improvement in family income",
-    },
-  ];
-
   const gallery = [
     "https://res.cloudinary.com/dyumbngrf/image/upload/v1755781482/photo_2025-08-16_13-58-35_mogldz.jpg",
     "https://res.cloudinary.com/dyumbngrf/image/upload/v1755781480/photo_2025-08-16_13-58-49_zx5bsx.jpg",
@@ -178,7 +65,7 @@ const WomenEmpowerment = () => {
               <img
                 src="https://res.cloudinary.com/dyumbngrf/image/upload/v1755781480/photo_2025-08-16_13-58-45_cahilo.jpg"
                 alt="Women Empowerment Programs"
-                className="w-full h-96 object-cover rounded-2xl shadow-xl"
+                className="w-full h-full object-cover rounded-2xl shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-blue-900 p-6 rounded-xl shadow-lg">
                 <p className="text-3xl font-bold">30+</p>
@@ -187,9 +74,21 @@ const WomenEmpowerment = () => {
             </div>
             <div className="">
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our water and sanitation programs focus on improving access to
-                clean water, promoting hygiene practices, and ensuring
-                sustainable sanitation solutions for communities in need.
+                Shalom Integrated Community Development (SICD) champions the
+                empowerment of women and girls across Ethiopia, with a focus on
+                creating sustainable pathways to economic and social
+                independence. Through comprehensive vocational training,
+                financial literacy workshops, and support for small business
+                development, SICD fosters an environment where women can achieve
+                self-reliance and become active leaders in their communities.
+              </p>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                To maximize our impact, SICD actively collaborates with a
+                network of dedicated partners, including local government
+                agencies, women's associations, and international NGOs. By
+                working together, we are building a stronger support system that
+                ensures women have the voice, choice, and power to shape their
+                own futures and drive positive change for their families.
               </p>
             </div>
           </div>
